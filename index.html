@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Documents — one the lab</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #f7fafc;
+      --card-bg: #ffffff;
+      --accent: #2c5282;
+      --accent-hover: #2a4365;
+      --border: #e2e8f0;
+      --btn-bg: #2c5282;
+      --btn-fg: #ffffff;
+      --btn-hover: #2a4365;
+      --btn-secondary-bg: #edf2f7;
+      --btn-secondary-fg: #2c5282;
+      --btn-secondary-hover: #e2e8f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e8e8;
+        --muted: #a0aec0;
+        --bg: #1a202c;
+        --card-bg: #2d3748;
+        --accent: #90cdf4;
+        --accent-hover: #63b3ed;
+        --border: #4a5568;
+        --btn-bg: #4299e1;
+        --btn-fg: #ffffff;
+        --btn-hover: #3182ce;
+        --btn-secondary-bg: #4a5568;
+        --btn-secondary-fg: #e8e8e8;
+        --btn-secondary-hover: #2d3748;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                   "Malgun Gothic", "맑은 고딕", Roboto, "Helvetica Neue", Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 1.9em;
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1em;
+      margin: 0;
+    }
+    .app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 24px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .app-name {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin: 0 0 4px;
+      color: var(--fg);
+    }
+    .app-package {
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.85em;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+    .doc-group {
+      margin-top: 14px;
+    }
+    .doc-label {
+      font-size: 0.9em;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 0.95em;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.05s ease;
+      border: 1px solid transparent;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary {
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+    }
+    .btn-primary:hover { background: var(--btn-hover); }
+    .btn-secondary {
+      background: var(--btn-secondary-bg);
+      color: var(--btn-secondary-fg);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover { background: var(--btn-secondary-hover); }
+    .lang-tag {
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.85em;
+      opacity: 0.85;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88em;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Legal Documents</h1>
+    <p class="subtitle">Privacy policies and legal documents for one the lab applications</p>
+  </header>
+
+  <main>
+
+    <article class="app-card">
+      <h2 class="app-name">Effortless Launcher</h2>
+      <p class="app-package">com.onethelab.effortless_launcher</p>
+
+      <div class="doc-group">
+        <p class="doc-label">Privacy Policy / 개인정보처리방침</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="./com.onethelab.effortless_launcher/privacy-policy.ko.html">
+            <span class="lang-tag">KO</span>
+            <span>한국어</span>
+          </a>
+          <a class="btn btn-secondary" href="./com.onethelab.effortless_launcher/privacy-policy.en.html">
+            <span class="lang-tag">EN</span>
+            <span>English</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 one the lab. All rights reserved.</p>
+    <p>Contact: <a href="mailto:gunug850@gmail.com">gunug850@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

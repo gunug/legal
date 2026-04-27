@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 — Effortless Launcher</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #ffffff;
+      --accent: #2c5282;
+      --border: #e2e8f0;
+      --table-header-bg: #f7fafc;
+      --code-bg: #f1f5f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e8e8;
+        --muted: #a0aec0;
+        --bg: #1a202c;
+        --accent: #90cdf4;
+        --border: #2d3748;
+        --table-header-bg: #2d3748;
+        --code-bg: #2d3748;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                   "Malgun Gothic", "맑은 고딕", Roboto, "Helvetica Neue", Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin: 0 0 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+    h2 {
+      font-size: 1.25em;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 1.05em;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p { margin: 12px 0; }
+    ul { padding-left: 22px; margin: 12px 0; }
+    li { margin: 6px 0; }
+    strong { color: var(--fg); }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9em;
+      margin-bottom: 24px;
+    }
+    .meta div { margin: 2px 0; }
+    .summary {
+      background: var(--code-bg);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 16px 0 24px;
+      border-radius: 4px;
+    }
+    .summary ul { margin: 8px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--table-header-bg);
+      font-weight: 600;
+    }
+    code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    .note {
+      font-size: 0.92em;
+      color: var(--muted);
+      font-style: italic;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <h1>개인정보처리방침</h1>
+
+  <div class="meta">
+    <div><strong>앱 이름</strong>: Effortless Launcher</div>
+    <div><strong>시행일</strong>: 2026-04-28</div>
+    <div><strong>최종 개정일</strong>: 2026-04-28</div>
+  </div>
+
+  <p>
+    본 처리방침은 Effortless Launcher(이하 &quot;본 앱&quot;)가 사용자의 개인정보를 어떻게 처리하는지 설명합니다.
+  </p>
+
+  <h2>1. 핵심 요약</h2>
+  <div class="summary">
+    <ul>
+      <li>본 앱은 <strong>인터넷 통신을 일체 수행하지 않습니다.</strong> (Android <code>INTERNET</code> 권한을 요청하지 않음)</li>
+      <li>어떠한 정보도 <strong>외부 서버나 제3자에게 전송되지 않습니다.</strong></li>
+      <li>모든 데이터는 사용자 단말기 내부에만 저장됩니다.</li>
+      <li>광고, 분석 도구(Firebase, Google Analytics, Crashlytics 등), 추적 SDK가 <strong>일체 포함되어 있지 않습니다.</strong></li>
+      <li>회원가입·로그인이 없으며, 이메일·이름·연락처·생년월일 등 신원 정보를 <strong>수집하지 않습니다.</strong></li>
+    </ul>
+  </div>
+
+  <h2>2. 수집하는 정보</h2>
+  <p>본 앱이 단말기 내부에 저장·처리하는 정보는 다음과 같습니다.</p>
+
+  <h3>2.1 필수</h3>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>내용</th><th>목적</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>설치된 앱 목록</td>
+        <td>앱 이름, 패키지명, 아이콘</td>
+        <td>런처의 핵심 기능(앱 검색·실행·표시)</td>
+      </tr>
+      <tr>
+        <td>앱 실행 기록</td>
+        <td>본 앱을 통해 실행한 앱의 패키지명과 시각 (앱당 최근 50회)</td>
+        <td>Hot Zone(자주 쓰는 앱) 정렬, 최근 사용 표시</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 선택 (사용자가 거부 가능)</h3>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>내용</th><th>목적</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Android 사용 통계</td>
+        <td>최근 30일간의 앱 실행 시각 (1회만 가져옴)</td>
+        <td>Hot Zone 초기 학습</td>
+      </tr>
+      <tr>
+        <td>알림 <strong>개수</strong></td>
+        <td>패키지별 미확인 알림의 개수</td>
+        <td>앱 아이콘 위 배지 표시</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">
+    알림 내용(제목·본문·발신자 등)은 일체 읽지 않습니다. 개수만 셉니다.<br>
+    선택 항목을 거부해도 본 앱의 핵심 기능은 정상 동작합니다.
+  </p>
+
+  <h2>3. 수집하지 않는 정보</h2>
+  <p>본 앱은 다음 정보를 <strong>요청하지도, 사용하지도 않습니다</strong>:</p>
+  <p>
+    위치 정보 · 연락처 · 통화 기록 · SMS · 카메라 · 마이크 · 전화 상태 ·
+    외부 저장소 · 광고 식별자(AAID) · 디바이스 ID · IMEI · MAC 주소 ·
+    이메일 · 이름 · 생년월일 · 알림 본문/제목
+  </p>
+
+  <h2>4. 정보의 저장 및 보관</h2>
+
+  <h3>4.1 저장 위치</h3>
+  <p>
+    모든 데이터는 <strong>사용자 단말기 내 본 앱 전용 영역(샌드박스)</strong>에만 저장됩니다.
+    외부 클라우드, 외부 서버, 다른 앱은 접근할 수 없습니다.
+  </p>
+
+  <h3>4.2 보관 기간</h3>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>보관 기간</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>앱 실행 기록</td><td>앱당 최근 50회 (이후 오래된 것부터 자동 삭제)</td></tr>
+      <tr><td>알림 개수</td><td>메모리에만 보관, 앱 종료 시 즉시 소멸</td></tr>
+      <tr><td>삭제된 앱 기록</td><td>1년 후 자동 삭제</td></tr>
+      <tr><td>환경설정 (보호 앱 목록 등)</td><td>사용자가 변경하거나 앱을 제거할 때까지</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. 정보의 제3자 제공 및 위탁</h2>
+  <p>본 앱은 수집한 정보를 <strong>제3자에게 제공하거나 위탁 처리하지 않습니다.</strong></p>
+
+  <h2>6. 사용자의 권리</h2>
+  <p>사용자는 언제든지 다음 방법으로 본 앱이 저장한 모든 정보를 즉시 완전 삭제할 수 있습니다:</p>
+  <ul>
+    <li><strong>Android 시스템 설정 → 앱 → Effortless Launcher → 저장공간 → &quot;데이터 삭제&quot;</strong></li>
+    <li><strong>앱 제거(Uninstall)</strong></li>
+  </ul>
+  <p>선택 권한(사용 통계, 알림 접근)은 다음 경로에서 언제든 회수할 수 있습니다:</p>
+  <ul>
+    <li>사용 통계: <strong>설정 → 앱 → 특수 액세스 → 사용 정보 액세스</strong></li>
+    <li>알림 접근: <strong>설정 → 앱 → 특수 액세스 → 알림 액세스</strong></li>
+  </ul>
+
+  <h2>7. 결제 정보</h2>
+  <p>
+    본 앱은 현재 인앱결제 기능이 구현되어 있지 않습니다.
+    향후 후원(Donation) 기능이 추가될 경우 결제 처리는 Google Play 결제 시스템이 담당하며,
+    본 앱은 신용카드·계좌 등 결제 수단 정보를 직접 수집·보관·전송하지 않습니다.
+  </p>
+
+  <h2>8. 아동의 개인정보</h2>
+  <p>
+    본 앱은 만 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.
+    애초에 신원 정보를 일체 수집하지 않으므로 연령과 무관하게 안전하게 사용할 수 있습니다.
+  </p>
+
+  <h2>9. 개인정보 보호 책임자</h2>
+  <table>
+    <tbody>
+      <tr><th>사업자명</th><td>one the lab (개인사업자)</td></tr>
+      <tr><th>대표자</th><td>조건희</td></tr>
+      <tr><th>연락처 (이메일)</th><td><a href="mailto:gunug850@gmail.com">gunug850@gmail.com</a></td></tr>
+    </tbody>
+  </table>
+  <p>본 처리방침이나 개인정보 처리에 관한 문의 사항이 있으시면 위 이메일로 연락해 주시기 바랍니다.</p>
+
+  <h2>10. 처리방침의 변경</h2>
+  <p>본 처리방침이 변경될 경우, 변경 사항은 본 문서 및 Google Play 스토어의 앱 페이지에 게시됩니다.</p>
+  <table>
+    <thead>
+      <tr><th>일자</th><th>버전</th><th>변경 내용</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2026-04-28</td><td>1.0</td><td>최초 작성</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <p class="note">
+    © 2026 one the lab. All rights reserved.
+  </p>
+
+</body>
+</html>

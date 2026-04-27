@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Effortless Launcher</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #ffffff;
+      --accent: #2c5282;
+      --border: #e2e8f0;
+      --table-header-bg: #f7fafc;
+      --code-bg: #f1f5f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e8e8;
+        --muted: #a0aec0;
+        --bg: #1a202c;
+        --accent: #90cdf4;
+        --border: #2d3748;
+        --table-header-bg: #2d3748;
+        --code-bg: #2d3748;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin: 0 0 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+    h2 {
+      font-size: 1.25em;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 1.05em;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p { margin: 12px 0; }
+    ul { padding-left: 22px; margin: 12px 0; }
+    li { margin: 6px 0; }
+    strong { color: var(--fg); }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9em;
+      margin-bottom: 24px;
+    }
+    .meta div { margin: 2px 0; }
+    .summary {
+      background: var(--code-bg);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 16px 0 24px;
+      border-radius: 4px;
+    }
+    .summary ul { margin: 8px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--table-header-bg);
+      font-weight: 600;
+    }
+    code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    .note {
+      font-size: 0.92em;
+      color: var(--muted);
+      font-style: italic;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy</h1>
+
+  <div class="meta">
+    <div><strong>App Name</strong>: Effortless Launcher</div>
+    <div><strong>Effective Date</strong>: 2026-04-28</div>
+    <div><strong>Last Updated</strong>: 2026-04-28</div>
+  </div>
+
+  <p>
+    This Privacy Policy explains how Effortless Launcher (the &quot;App&quot;) handles your personal information.
+  </p>
+
+  <h2>1. Summary at a Glance</h2>
+  <div class="summary">
+    <ul>
+      <li>The App <strong>does not perform any internet communication.</strong> (The Android <code>INTERNET</code> permission is not requested.)</li>
+      <li>No information is <strong>transmitted to any external server or third party.</strong></li>
+      <li>All data is stored locally on your device only.</li>
+      <li>The App contains <strong>no advertising, no analytics tools</strong> (Firebase, Google Analytics, Crashlytics, etc.), and <strong>no tracking SDKs.</strong></li>
+      <li>There is no sign-up or login. The App <strong>does not collect</strong> identity information such as email, name, contact, or date of birth.</li>
+    </ul>
+  </div>
+
+  <h2>2. Information We Process</h2>
+  <p>The App stores and processes the following information solely on your device:</p>
+
+  <h3>2.1 Required</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Content</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>List of installed apps</td>
+        <td>App display name, package name, icon</td>
+        <td>Core launcher functionality (search, launch, display)</td>
+      </tr>
+      <tr>
+        <td>App launch history</td>
+        <td>Package name and timestamp of apps launched through this App (most recent 50 entries per app)</td>
+        <td>Hot Zone (frequently used apps) ordering and &quot;Recently Used&quot; display</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 Optional (User may decline)</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Content</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Android usage statistics</td>
+        <td>App launch timestamps from the past 30 days (queried only once)</td>
+        <td>Initial Hot Zone warm-up</td>
+      </tr>
+      <tr>
+        <td>Notification <strong>counts</strong></td>
+        <td>Number of unread notifications per package</td>
+        <td>Badge display on app icons</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">
+    Notification content (title, body, sender, etc.) is never read. Only the count is recorded.<br>
+    Declining the optional items does not affect the App's core functionality.
+  </p>
+
+  <h2>3. Information We Do Not Collect</h2>
+  <p>The App <strong>neither requests nor uses</strong> the following information:</p>
+  <p>
+    Location data &middot; Contacts &middot; Call logs &middot; SMS &middot; Camera &middot; Microphone &middot; Phone state &middot;
+    External storage &middot; Advertising ID (AAID) &middot; Device ID &middot; IMEI &middot; MAC address &middot;
+    Email &middot; Name &middot; Date of birth &middot; Notification body/title
+  </p>
+
+  <h2>4. Storage and Retention</h2>
+
+  <h3>4.1 Storage Location</h3>
+  <p>
+    All data is stored exclusively in the App's <strong>private sandbox area on your device</strong>.
+    External clouds, external servers, and other apps cannot access this data.
+  </p>
+
+  <h3>4.2 Retention Periods</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Retention Period</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>App launch history</td><td>Most recent 50 entries per app (older entries are automatically deleted)</td></tr>
+      <tr><td>Notification counts</td><td>Held only in memory; cleared immediately when the App terminates</td></tr>
+      <tr><td>Deleted-app records</td><td>Automatically removed after 1 year</td></tr>
+      <tr><td>Settings (e.g., protected apps list)</td><td>Until you change them or uninstall the App</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. Sharing and Third-Party Disclosure</h2>
+  <p>The App <strong>does not share or transfer</strong> the collected information to any third party.</p>
+
+  <h2>6. Your Rights</h2>
+  <p>You may immediately and completely delete all information stored by the App at any time using the following methods:</p>
+  <ul>
+    <li><strong>Android system settings → Apps → Effortless Launcher → Storage → &quot;Clear data&quot;</strong></li>
+    <li><strong>Uninstall the App</strong></li>
+  </ul>
+  <p>Optional permissions (usage statistics, notification access) can be revoked at any time:</p>
+  <ul>
+    <li>Usage statistics: <strong>Settings → Apps → Special access → Usage access</strong></li>
+    <li>Notification access: <strong>Settings → Apps → Special access → Notification access</strong></li>
+  </ul>
+
+  <h2>7. Payment Information</h2>
+  <p>
+    The App does not currently implement in-app purchases.
+    If a donation feature is added in the future, payment processing will be handled by the Google Play billing system.
+    The App will not directly collect, store, or transmit payment instrument information such as credit card or bank account details.
+  </p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>
+    The App does not knowingly collect personal information from children under the age of 13.
+    Since no identity information is collected at all, the App can be used safely regardless of age.
+  </p>
+
+  <h2>9. Privacy Officer</h2>
+  <table>
+    <tbody>
+      <tr><th>Business Name</th><td>one the lab (Sole Proprietorship)</td></tr>
+      <tr><th>Representative</th><td>Cho Geon-hee (조건희)</td></tr>
+      <tr><th>Contact (Email)</th><td><a href="mailto:gunug850@gmail.com">gunug850@gmail.com</a></td></tr>
+    </tbody>
+  </table>
+  <p>For inquiries regarding this Privacy Policy or the handling of personal information, please contact us at the email above.</p>
+
+  <h2>10. Changes to this Policy</h2>
+  <p>If this Privacy Policy is changed, the changes will be posted in this document and on the App's Google Play Store page.</p>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Version</th><th>Changes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2026-04-28</td><td>1.0</td><td>Initial version</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <p class="note">
+    &copy; 2026 one the lab. All rights reserved.
+  </p>
+
+</body>
+</html>

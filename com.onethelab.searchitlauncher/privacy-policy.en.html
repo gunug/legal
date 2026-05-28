@@ -127,7 +127,7 @@
   <h2>1. Summary at a Glance</h2>
   <div class="summary">
     <ul>
-      <li>The App <strong>does not perform any internet communication.</strong> (The Android <code>INTERNET</code> permission is not requested.)</li>
+      <li>Except for in-app donation purchases, the App <strong>does not perform any internet communication.</strong> (The Android <code>INTERNET</code> permission is declared by the in-app purchase library.)</li>
       <li>No information is <strong>transmitted to any external server or third party.</strong></li>
       <li>All data is stored locally on your device only.</li>
       <li>The App contains <strong>no advertising, no analytics tools</strong> (Firebase, Google Analytics, Crashlytics, etc.), and <strong>no tracking SDKs.</strong></li>
@@ -243,6 +243,7 @@
       <tr><th>Date</th><th>Version</th><th>Changes</th></tr>
     </thead>
     <tbody>
+      <tr><td>2026-05-28</td><td>1.1</td><td>Corrected internet permission description (INTERNET permission is declared by the in-app purchase library)</td></tr>
       <tr><td>2026-05-28</td><td>1.0</td><td>Initial version</td></tr>
     </tbody>
   </table>

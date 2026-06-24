@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Planlet</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #ffffff;
+      --accent: #2c5282;
+      --border: #e2e8f0;
+      --table-header-bg: #f7fafc;
+      --code-bg: #f1f5f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e8e8;
+        --muted: #a0aec0;
+        --bg: #1a202c;
+        --accent: #90cdf4;
+        --border: #2d3748;
+        --table-header-bg: #2d3748;
+        --code-bg: #2d3748;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin: 0 0 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+    h2 {
+      font-size: 1.25em;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 1.05em;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p { margin: 12px 0; }
+    ul { padding-left: 22px; margin: 12px 0; }
+    li { margin: 6px 0; }
+    strong { color: var(--fg); }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9em;
+      margin-bottom: 24px;
+    }
+    .meta div { margin: 2px 0; }
+    .summary {
+      background: var(--code-bg);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 16px 0 24px;
+      border-radius: 4px;
+    }
+    .summary ul { margin: 8px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--table-header-bg);
+      font-weight: 600;
+    }
+    code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    .note {
+      font-size: 0.92em;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .warn {
+      background: var(--code-bg);
+      border-left: 4px solid #d69e2e;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy</h1>
+
+  <div class="meta">
+    <div><strong>App Name</strong>: Planlet</div>
+    <div><strong>Package</strong>: com.onethelab.planlet</div>
+    <div><strong>Effective Date</strong>: 2026-06-11</div>
+    <div><strong>Last Updated</strong>: 2026-06-24</div>
+  </div>
+
+  <p>
+    This Privacy Policy explains how Planlet (the &quot;App&quot;) handles your personal information.
+    Planlet is a productivity app for organizing goals (Plans) and their nested tasks as a tree,
+    with an optional AI feature that helps generate and refine plans, and an optional public store
+    where you can share your plans or download plans created by others.
+  </p>
+
+  <h2>1. Summary at a Glance</h2>
+  <div class="summary">
+    <ul>
+      <li>The <strong>Plans and Tasks you create (titles, descriptions, structure, progress) are, by default, stored only on your device.</strong> The App performs no automatic backup or sync.</li>
+      <li><strong>Only when you use an AI feature</strong>, the text included in that request is sent through the App's backend to the AI processor (OpenAI) for processing.</li>
+      <li>AI features, credits, and <strong>uploading to the store require sign-in</strong>; signing in with Google uses your <strong>email address</strong> to identify your account. Features that don't use AI, as well as <strong>browsing and downloading</strong> from the store, work without signing in.</li>
+      <li>A <strong>plan you share to the Plan store (public marketplace)</strong> becomes <strong>publicly</strong> searchable and downloadable by anyone. Sharing happens only when you choose to do so.</li>
+      <li>The App contains <strong>no advertising, no analytics tools</strong> (Firebase, Google Analytics, etc.), and <strong>no tracking SDKs.</strong></li>
+      <li>The App is a productivity app for managing goal and task plans. It <strong>is not intended to store authentication secrets</strong> such as passwords, API keys, certificates, or private keys.</li>
+    </ul>
+  </div>
+
+  <h2>2. Information the App Processes</h2>
+  <p>The information the App processes and where it is stored:</p>
+
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Content</th><th>Storage Location</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>User-created content</td>
+        <td>Plan/Task titles, descriptions, tree structure, estimated durations, complete/waiting state, prerequisites, settings</td>
+        <td>On device (local DB)</td>
+        <td>Core functionality (creating, managing, and progressing plans)</td>
+      </tr>
+      <tr>
+        <td>Account information</td>
+        <td>Email address, authentication identifier (user ID), login session token</td>
+        <td>Auth server (Supabase) and device</td>
+        <td>Sign-in; linking AI features, credits, and store uploads to the correct account</td>
+      </tr>
+      <tr>
+        <td>AI request content</td>
+        <td>Plan/Task text, chat messages, and related context (ancestor/sibling task titles) sent when you use AI generate / edit / describe</td>
+        <td>Sent through the backend to OpenAI</td>
+        <td>AI plan generation, subtask generation, description writing</td>
+      </tr>
+      <tr>
+        <td>Shared (public) content</td>
+        <td>The full Plan you upload to the store (title, description, tree structure) and your uploader identifier (author ID)</td>
+        <td>Backend server (Supabase), <strong>publicly posted</strong></td>
+        <td>Public search and download in the Plan store</td>
+      </tr>
+      <tr>
+        <td>Usage &amp; credit information</td>
+        <td>Credit balance, top-up/usage records, per-call metadata (model name, token counts, cost)</td>
+        <td>Backend server (Supabase)</td>
+        <td>Metering and billing of AI usage; abuse prevention</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">
+    Usage logs record <strong>metadata of AI calls (model, token counts, cost)</strong> and are used only for billing and operations.
+  </p>
+
+  <h2>3. AI Features and Third-Party Processing</h2>
+  <p>
+    When you use an AI feature (&quot;Generate with AI&quot;, &quot;Generate subtasks with AI&quot;,
+    &quot;Edit Plan with AI&quot;, &quot;Generate description&quot;), the text included in that request
+    (the Plan/Task content you entered and your chat messages) is sent through the App's backend
+    (Edge Function) to <strong>OpenAI</strong> for processing.
+  </p>
+  <p>
+    This transmission happens <strong>only when you actively trigger an AI feature</strong>.
+    If you do not use AI features, your content is never sent off your device.
+    AI requests do not include account identifiers such as your name or email; authentication is
+    handled solely via a token (JWT).
+  </p>
+  <p class="note">
+    Because input is sent to an external provider during AI processing, we recommend that you
+    <strong>do not include highly sensitive information</strong> (passwords, API keys, national ID
+    numbers, etc.) in AI requests.
+  </p>
+
+  <h2>4. Account and Sign-In</h2>
+  <p>Using AI features and credits, and uploading to the store, requires sign-in. The App supports the following methods:</p>
+  <ul>
+    <li><strong>Google Sign-In</strong>: When you sign in with a Google account, the App requests only the <code>email</code> scope. The issued Google ID token is verified by the auth server (Supabase) and exchanged for a login session. The App does not access other Google data such as your contacts, calendar, or Drive.</li>
+    <li><strong>Anonymous session</strong>: A device-bound anonymous session may be created without sign-in to enable features such as <strong>browsing and downloading</strong> from the store. An anonymous session is tied to the device, and any associated data (e.g., credits) may be lost upon reinstall or device change. An anonymous session contains no personal identifiers such as email.</li>
+  </ul>
+  <p>The plan creation and management features that don't use AI, and store browsing/downloading, can be used without signing in.</p>
+
+  <h2>5. Payment and Credits</h2>
+  <p>
+    AI features consume credits. A trial amount of credits may be granted upon registration.
+    Where paid credit purchases are offered, payment is processed through the
+    <strong>Google Play billing system</strong>. The App forwards the purchase receipt
+    (purchase token and product ID) to its backend (Edge Function), which verifies the purchase via
+    the <strong>Google Play Developer API</strong> before granting credits. The App
+    <strong>does not directly collect, store, or transmit</strong> payment instrument information
+    such as credit card numbers, bank accounts, or billing addresses.
+    The only payment-related information the App handles is the purchase token, product ID,
+    purchase-verification result, and the credited amount.
+  </p>
+
+  <h2>6. Plan Store (Public Sharing)</h2>
+  <p>
+    The App includes a <strong>Plan store (public marketplace)</strong> that lets you share the plans you create with other users.
+  </p>
+  <ul>
+    <li><strong>Upload (sharing)</strong>: Only when a signed-in user actively chooses &quot;Share to store&quot; from a plan's menu, the full contents of that Plan (title, description, tree structure) are posted <strong>publicly</strong> to the server. The post is stored together with the uploader's <strong>author ID</strong>.</li>
+    <li><strong>Search &amp; download</strong>: Published plans can be searched and downloaded to any device by anyone, <strong>even without signing in</strong>.</li>
+    <li><strong>Deletion</strong>: You can <strong>delete your own posts</strong> at any time from &quot;Manage my uploads&quot; in the App (only your own posts, enforced by row-level security).</li>
+  </ul>
+  <div class="warn">
+    ⚠️ A plan you share to the store is made <strong>publicly visible to anyone</strong>. If you share a
+    plan whose title, description, or other text contains personal information (name, contact, address,
+    etc.), that information may become public. <strong>Please make sure no personal information is
+    included before sharing.</strong>
+  </div>
+  <p class="note">
+    Some official (system) example plans provided by the App are posted without an author and are,
+    like user posts, subject to public search and download.
+  </p>
+
+  <h2>7. Storage and Retention</h2>
+
+  <h3>7.1 Storage Location</h3>
+  <ul>
+    <li><strong>User-created content</strong>: Stored in the App's private sandbox area on your device.</li>
+    <li><strong>Account, usage, credit, and shared content</strong>: Stored in the App's backend infrastructure (Supabase, data region: Singapore).</li>
+  </ul>
+
+  <h3>7.2 Retention Periods</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Retention Period</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>User-created content (local)</td><td>Until you delete it, clear app data, or uninstall the App</td></tr>
+      <tr><td>Account &amp; credit information</td><td>For the lifetime of the account; processed upon an account/data deletion request</td></tr>
+      <tr><td>Shared (public) posts</td><td>Until you delete them yourself or request account/data deletion</td></tr>
+      <tr><td>AI usage logs (metadata)</td><td>Retained as needed for billing and operations</td></tr>
+    </tbody>
+  </table>
+
+  <h2>8. Sharing and Sub-Processors</h2>
+  <p>The App does not sell your information or share it with third parties for marketing. To provide the service, it uses the following processors (sub-processors):</p>
+  <table>
+    <thead>
+      <tr><th>Processor</th><th>Purpose</th><th>Information Processed</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Google (Google Sign-In)</td><td>Login authentication</td><td>Email, authentication tokens</td></tr>
+      <tr><td>Supabase (backend hosting, Singapore)</td><td>Authentication, credit/usage management, AI request relay, storage of shared posts</td><td>Account info, usage/credits, AI request content (relayed), shared content</td></tr>
+      <tr><td>OpenAI</td><td>AI plan/description generation</td><td>Text included in AI requests</td></tr>
+      <tr><td>Google Play (payment, where applicable)</td><td>Credit purchase processing and verification</td><td>Payment processing info (not stored by the App), purchase token, product ID</td></tr>
+    </tbody>
+  </table>
+  <p class="note">
+    Some of these processors (e.g., OpenAI in the United States, Supabase in Singapore) process
+    information outside the Republic of Korea. By using the relevant features (such as AI), you are
+    deemed to consent to this overseas processing. In addition, posts you share to the store are made
+    public to an unspecified number of people through the backend above.
+  </p>
+
+  <h2>9. Information We Do Not Collect</h2>
+  <p>The App <strong>neither requests nor collects</strong> the following:</p>
+  <p>
+    Location data &middot; Contacts &middot; Call logs &middot; SMS &middot; Camera &middot; Microphone &middot;
+    External storage &middot; Advertising ID (AAID) &middot; IMEI &middot; MAC address &middot;
+    Date of birth &middot; Notification content &middot; Usage statistics &middot;
+    Any Google account data beyond your email (contacts, calendar, Drive, etc.)
+  </p>
+
+  <h2>10. Permissions</h2>
+  <p>
+    The App uses the <code>INTERNET</code> permission. It is used solely for network communication
+    to authenticate sign-in, relay AI requests, check/deduct credits, and search/upload/download in the store.
+  </p>
+
+  <h2>11. Your Rights</h2>
+  <p>You may delete and manage your information at any time using the following methods:</p>
+  <ul>
+    <li><strong>Delete a local plan</strong>: Deleting a Plan/Task in the App removes it from the device database.</li>
+    <li><strong>Clear all local data</strong>: Android system settings → Apps → Planlet → Storage → &quot;Clear data&quot;, or uninstall the App.</li>
+    <li><strong>Delete store uploads</strong>: You can delete posts you shared from &quot;Manage my uploads&quot; in the App.</li>
+    <li><strong>Sign out</strong>: Signing out within the App ends the session on your device.</li>
+    <li><strong>Account &amp; server data deletion</strong>: To delete your account and server-stored information (including email, credits, usage records, and shared posts), please request it at the email below and we will process it. (The App does not currently provide in-app automatic account deletion; requests are handled manually.)</li>
+  </ul>
+
+  <h2>12. Children's Privacy</h2>
+  <p>
+    The App is not directed to children under the age of 14 and does not knowingly collect personal
+    information from children.
+  </p>
+
+  <h2>13. Information Security</h2>
+  <p>
+    The App protects information using in-transit encryption (HTTPS/TLS) and row-level security (RLS) on
+    the auth server. However, the App is a <strong>general productivity app for managing goal and task
+    plans</strong>, and is not intended to store authentication secrets such as passwords, API keys,
+    certificates, or private keys. Please do not store such secrets in the App.
+  </p>
+
+  <h2>14. Privacy Officer</h2>
+  <table>
+    <tbody>
+      <tr><th>Business Name</th><td>one the lab (Sole Proprietorship)</td></tr>
+      <tr><th>Representative</th><td>Cho Geon-hee (조건희)</td></tr>
+      <tr><th>Contact (Email)</th><td><a href="mailto:gunug850@gmail.com">gunug850@gmail.com</a></td></tr>
+    </tbody>
+  </table>
+  <p>For inquiries regarding this Privacy Policy, the handling of personal information, or account/data/post deletion, please contact us at the email above.</p>
+
+  <h2>15. Changes to this Policy</h2>
+  <p>If this Privacy Policy is changed, the changes will be posted in this document and on the App's Google Play Store page.</p>
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Version</th><th>Changes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2026-06-24</td><td>1.1</td><td>Added Plan store (public sharing) processing; clarified anonymous session and payment verification; corrected description of the App</td></tr>
+      <tr><td>2026-06-11</td><td>1.0</td><td>Initial version</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <p class="note">
+    &copy; 2026 one the lab. All rights reserved.
+  </p>
+
+</body>
+</html>

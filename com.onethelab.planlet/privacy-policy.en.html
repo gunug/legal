@@ -131,16 +131,18 @@
   <p>
     This Privacy Policy explains how Planlet (the &quot;App&quot;) handles your personal information.
     Planlet is a productivity app for organizing goals (Plans) and their nested tasks as a tree,
-    with an optional AI feature that helps generate and refine plans, and an optional public store
-    where you can share your plans or download plans created by others.
+    with an optional AI feature that helps generate and refine plans, an optional public store
+    where you can share your plans or download plans created by others, and an optional backup
+    to your own Google Drive.
   </p>
 
   <h2>1. Summary at a Glance</h2>
   <div class="summary">
     <ul>
-      <li>The <strong>Plans and Tasks you create (titles, descriptions, structure, progress) are, by default, stored only on your device.</strong> The App performs no automatic backup or sync.</li>
+      <li>The <strong>Plans and Tasks you create (titles, descriptions, structure, progress) are, by default, stored on your device.</strong></li>
+      <li><strong>If you sign in and enable Google Drive backup</strong>, a copy of your plan data is stored in <strong>your own Google Drive (an app-private folder)</strong>. Auto-backup is on by default and can be turned off in the App's settings.</li>
       <li><strong>Only when you use an AI feature</strong>, the text included in that request is sent through the App's backend to the AI processor (OpenAI) for processing.</li>
-      <li>AI features, credits, and <strong>uploading to the store require sign-in</strong>; signing in with Google uses your <strong>email address</strong> to identify your account. Features that don't use AI, as well as <strong>browsing and downloading</strong> from the store, work without signing in.</li>
+      <li>AI features and credits, Google Drive backup, and <strong>uploading to the store require sign-in</strong>; signing in with Google uses your <strong>email address</strong> to identify your account. Features that don't use AI, as well as <strong>browsing and downloading</strong> from the store, work without signing in.</li>
       <li>A <strong>plan you share to the Plan store (public marketplace)</strong> becomes <strong>publicly</strong> searchable and downloadable by anyone. Sharing happens only when you choose to do so.</li>
       <li>The App contains <strong>no advertising, no analytics tools</strong> (Firebase, Google Analytics, etc.), and <strong>no tracking SDKs.</strong></li>
       <li>The App is a productivity app for managing goal and task plans. It <strong>is not intended to store authentication secrets</strong> such as passwords, API keys, certificates, or private keys.</li>
@@ -158,14 +160,14 @@
       <tr>
         <td>User-created content</td>
         <td>Plan/Task titles, descriptions, tree structure, estimated durations, complete/waiting state, prerequisites, settings</td>
-        <td>On device (local DB)</td>
-        <td>Core functionality (creating, managing, and progressing plans)</td>
+        <td>On device (local DB); a copy in your own Google Drive if backup is enabled</td>
+        <td>Core functionality (creating, managing, and progressing plans); backup when you choose</td>
       </tr>
       <tr>
         <td>Account information</td>
         <td>Email address, authentication identifier (user ID), login session token</td>
         <td>Auth server (Supabase) and device</td>
-        <td>Sign-in; linking AI features, credits, and store uploads to the correct account</td>
+        <td>Sign-in; linking AI features, credits, store uploads, and Drive backup to the correct account</td>
       </tr>
       <tr>
         <td>AI request content</td>
@@ -200,9 +202,9 @@
   </p>
   <p>
     This transmission happens <strong>only when you actively trigger an AI feature</strong>.
-    If you do not use AI features, your content is never sent off your device.
-    AI requests do not include account identifiers such as your name or email; authentication is
-    handled solely via a token (JWT).
+    If you do not use AI features, your content is not sent off your device (except Google Drive
+    backup, see Section 7). AI requests do not include account identifiers such as your name or
+    email; authentication is handled solely via a token (JWT).
   </p>
   <p class="note">
     Because input is sent to an external provider during AI processing, we recommend that you
@@ -211,9 +213,9 @@
   </p>
 
   <h2>4. Account and Sign-In</h2>
-  <p>Using AI features and credits, and uploading to the store, requires sign-in. The App supports the following methods:</p>
+  <p>Using AI features and credits, Google Drive backup, and uploading to the store requires sign-in. The App supports the following methods:</p>
   <ul>
-    <li><strong>Google Sign-In</strong>: When you sign in with a Google account, the App requests only the <code>email</code> scope. The issued Google ID token is verified by the auth server (Supabase) and exchanged for a login session. The App does not access other Google data such as your contacts, calendar, or Drive.</li>
+    <li><strong>Google Sign-In</strong>: When you sign in with a Google account, the App requests the <code>email</code> scope. If you use Google Drive backup, the App additionally requests the <code>drive.appdata</code> (app-private data folder) scope (existing users may need to grant consent once). The issued Google ID token is verified by the auth server (Supabase) and exchanged for a login session. The App does not access your <strong>contacts, calendar, or any Drive files outside its own app-private folder</strong>.</li>
     <li><strong>Anonymous session</strong>: A device-bound anonymous session may be created without sign-in to enable features such as <strong>browsing and downloading</strong> from the store. An anonymous session is tied to the device, and any associated data (e.g., credits) may be lost upon reinstall or device change. An anonymous session contains no personal identifiers such as email.</li>
   </ul>
   <p>The plan creation and management features that don't use AI, and store browsing/downloading, can be used without signing in.</p>
@@ -251,28 +253,44 @@
     like user posts, subject to public search and download.
   </p>
 
-  <h2>7. Storage and Retention</h2>
-
-  <h3>7.1 Storage Location</h3>
+  <h2>7. Google Drive Backup</h2>
+  <p>
+    The App offers a feature to back up the plan data you create to <strong>your own Google Drive</strong>.
+  </p>
   <ul>
-    <li><strong>User-created content</strong>: Stored in the App's private sandbox area on your device.</li>
+    <li><strong>Storage location</strong>: The backup file is stored in a <strong>hidden, app-private folder (app data folder)</strong> in your Google Drive. Only this App can access that folder, and <strong>the App's service operator does not hold this data.</strong></li>
+    <li><strong>What is backed up</strong>: A full snapshot of your Plans/Tasks (titles, descriptions, structure, plus state such as completion, estimated durations, waiting, archival, and prerequisites) is stored in a single file.</li>
+    <li><strong>Auto-backup</strong>: Auto-backup is <strong>on by default</strong>; while signed in, changed content is uploaded when the App moves to the background. You can turn auto-backup off in the App's account settings, or run &quot;Back up now&quot;/&quot;Restore&quot; manually.</li>
+    <li><strong>Restore</strong>: Restoring <strong>fully replaces</strong> the current local data on your device with the backup, so the App warns and asks for confirmation before doing so.</li>
+  </ul>
+  <p class="note">
+    For this feature the App uses only Google's <code>drive.appdata</code> scope and does not access your other Drive files.
+    You retain control over the backup data and can delete the backup file directly from your Google Drive.
+  </p>
+
+  <h2>8. Storage and Retention</h2>
+
+  <h3>8.1 Storage Location</h3>
+  <ul>
+    <li><strong>User-created content</strong>: Stored in the App's private sandbox area on your device. If backup is enabled, a copy is stored in the app-private folder of your own Google Drive.</li>
     <li><strong>Account, usage, credit, and shared content</strong>: Stored in the App's backend infrastructure (Supabase, data region: Singapore).</li>
   </ul>
 
-  <h3>7.2 Retention Periods</h3>
+  <h3>8.2 Retention Periods</h3>
   <table>
     <thead>
       <tr><th>Item</th><th>Retention Period</th></tr>
     </thead>
     <tbody>
       <tr><td>User-created content (local)</td><td>Until you delete it, clear app data, or uninstall the App</td></tr>
+      <tr><td>Google Drive backup</td><td>Until you delete the backup file from your Drive (managed by you)</td></tr>
       <tr><td>Account &amp; credit information</td><td>For the lifetime of the account; processed upon an account/data deletion request</td></tr>
       <tr><td>Shared (public) posts</td><td>Until you delete them yourself or request account/data deletion</td></tr>
       <tr><td>AI usage logs (metadata)</td><td>Retained as needed for billing and operations</td></tr>
     </tbody>
   </table>
 
-  <h2>8. Sharing and Sub-Processors</h2>
+  <h2>9. Sharing and Sub-Processors</h2>
   <p>The App does not sell your information or share it with third parties for marketing. To provide the service, it uses the following processors (sub-processors):</p>
   <table>
     <thead>
@@ -280,6 +298,7 @@
     </thead>
     <tbody>
       <tr><td>Google (Google Sign-In)</td><td>Login authentication</td><td>Email, authentication tokens</td></tr>
+      <tr><td>Google (Google Drive)</td><td>Backing up/restoring plans to your own Drive</td><td>Plan data (stored in the app-private folder of your own Drive)</td></tr>
       <tr><td>Supabase (backend hosting, Singapore)</td><td>Authentication, credit/usage management, AI request relay, storage of shared posts</td><td>Account info, usage/credits, AI request content (relayed), shared content</td></tr>
       <tr><td>OpenAI</td><td>AI plan/description generation</td><td>Text included in AI requests</td></tr>
       <tr><td>Google Play (payment, where applicable)</td><td>Credit purchase processing and verification</td><td>Payment processing info (not stored by the App), purchase token, product ID</td></tr>
@@ -292,38 +311,41 @@
     public to an unspecified number of people through the backend above.
   </p>
 
-  <h2>9. Information We Do Not Collect</h2>
+  <h2>10. Information We Do Not Collect</h2>
   <p>The App <strong>neither requests nor collects</strong> the following:</p>
   <p>
     Location data &middot; Contacts &middot; Call logs &middot; SMS &middot; Camera &middot; Microphone &middot;
     External storage &middot; Advertising ID (AAID) &middot; IMEI &middot; MAC address &middot;
     Date of birth &middot; Notification content &middot; Usage statistics &middot;
-    Any Google account data beyond your email (contacts, calendar, Drive, etc.)
+    Any Google account data beyond your email and (when backup is used) the app-private Drive folder
+    (contacts, calendar, other Drive files, etc.)
   </p>
 
-  <h2>10. Permissions</h2>
+  <h2>11. Permissions</h2>
   <p>
     The App uses the <code>INTERNET</code> permission. It is used solely for network communication
-    to authenticate sign-in, relay AI requests, check/deduct credits, and search/upload/download in the store.
+    to authenticate sign-in, relay AI requests, check/deduct credits, search/upload/download in the store,
+    and back up/restore via Google Drive.
   </p>
 
-  <h2>11. Your Rights</h2>
+  <h2>12. Your Rights</h2>
   <p>You may delete and manage your information at any time using the following methods:</p>
   <ul>
     <li><strong>Delete a local plan</strong>: Deleting a Plan/Task in the App removes it from the device database.</li>
     <li><strong>Clear all local data</strong>: Android system settings → Apps → Planlet → Storage → &quot;Clear data&quot;, or uninstall the App.</li>
     <li><strong>Delete store uploads</strong>: You can delete posts you shared from &quot;Manage my uploads&quot; in the App.</li>
+    <li><strong>Delete Google Drive backup</strong>: You can delete the App's backup file directly from your own Google Drive.</li>
     <li><strong>Sign out</strong>: Signing out within the App ends the session on your device.</li>
     <li><strong>Account &amp; server data deletion</strong>: To delete your account and server-stored information (including email, credits, usage records, and shared posts), please request it at the email below and we will process it. (The App does not currently provide in-app automatic account deletion; requests are handled manually.)</li>
   </ul>
 
-  <h2>12. Children's Privacy</h2>
+  <h2>13. Children's Privacy</h2>
   <p>
     The App is not directed to children under the age of 14 and does not knowingly collect personal
     information from children.
   </p>
 
-  <h2>13. Information Security</h2>
+  <h2>14. Information Security</h2>
   <p>
     The App protects information using in-transit encryption (HTTPS/TLS) and row-level security (RLS) on
     the auth server. However, the App is a <strong>general productivity app for managing goal and task
@@ -331,7 +353,7 @@
     certificates, or private keys. Please do not store such secrets in the App.
   </p>
 
-  <h2>14. Privacy Officer</h2>
+  <h2>15. Privacy Officer</h2>
   <table>
     <tbody>
       <tr><th>Business Name</th><td>one the lab (Sole Proprietorship)</td></tr>
@@ -341,14 +363,14 @@
   </table>
   <p>For inquiries regarding this Privacy Policy, the handling of personal information, or account/data/post deletion, please contact us at the email above.</p>
 
-  <h2>15. Changes to this Policy</h2>
+  <h2>16. Changes to this Policy</h2>
   <p>If this Privacy Policy is changed, the changes will be posted in this document and on the App's Google Play Store page.</p>
   <table>
     <thead>
       <tr><th>Date</th><th>Version</th><th>Changes</th></tr>
     </thead>
     <tbody>
-      <tr><td>2026-06-24</td><td>1.1</td><td>Added Plan store (public sharing) processing; clarified anonymous session and payment verification; corrected description of the App</td></tr>
+      <tr><td>2026-06-24</td><td>1.1</td><td>Added Plan store (public sharing) and Google Drive backup processing; clarified anonymous session, payment verification, and sign-in scopes; corrected description of the App</td></tr>
       <tr><td>2026-06-11</td><td>1.0</td><td>Initial version</td></tr>
     </tbody>
   </table>
